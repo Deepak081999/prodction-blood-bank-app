@@ -31,13 +31,7 @@ app.use("/api/v1/analytics", require("./routes/analyticsRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 
 
-//STATIC PATH
-app.use(express.static(path.join(__dirname, "./client/build")));
 
-//STATIS ROUTES
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
 
 
 
