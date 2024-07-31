@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd ../client && npm install --dev  && npm cd ../server && npm install --dev",
+    "build": "cd ../client && npm run build",
     "server": "nodemon server.js",
     "client": "npm start --prefix ../././client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
